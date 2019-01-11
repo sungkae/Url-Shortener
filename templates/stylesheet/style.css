@@ -1,0 +1,20 @@
+body{
+    background-color:#999999;
+    font-family: 'bold', Consolas;
+}
+
+button{
+    height:30px;
+    width:150px;
+    border-radius:8px;
+    padding:10px;
+    font-size:20px;
+    font-family: 'bold',Consolas;
+    height:52px;
+    cursor:pointer;
+    background-color: wheat;
+}
+
+div{
+    margin-top: 30px;
+}

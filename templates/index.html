@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortening</title>
+
+</head>
+<body>
+    <!--<style>-->
+        <!--@import url("./stylesheet/style.css")-->
+    <!--</style>-->
+    <!--flask의 css, script 적용방식은 다르다! Jinja2 참고-->
+    <center class = "center">
+        <div class = "column">
+            <h2 class = "image header">
+                <div class = "content">
+                    URL Shortener
+                </div>
+            </h2>
+            <div class = "ui stackable container">
+               {%block body%}
+                    <form class = "ui form" action="/" method = "post">
+                        <div class = "field">
+                            <label>Input URL</label>
+                            <input type="text" name = "input-url" placeholder="put your URL here">
+                        </div>
+                    <button class ="ui button" type = "submit">Submit</button>
+                    </form>
+                {% endblock %}
+            </div>
+            {%if short%}
+            <div>
+                <form action="/" method = "post">
+                    <h3>Your Shortened URL is: <a name="copy-url" href="http://{{short}}">{{short}}</a></h3>
+                    <br>
+                    <input type = "submit" title = "Copy">
+                        Copy
+                    </input>
+                </form>
+
+            </div>
+            {%endif%}
+        </div>
+    </center>
+
+    <script type = "text/javascript" src="script.js"></script>
+</body>
+</html>
+
